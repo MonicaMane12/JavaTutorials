@@ -1,0 +1,24 @@
+public class FirstLastDigitSum {
+    public static int sumFirstAndLastDigit(int number) {
+        int sum = 0;
+        int m = 0;
+        int n = 0;
+        int ogNumber = number;
+        if (number < 0) {
+            return -1;
+        } else {
+            while (number >= 10) {
+                number = number / 10;
+                n = number;
+            }
+            if (ogNumber >= 10) {
+                m = ogNumber % 10;
+            }
+            if(ogNumber< 10){
+                sum = ogNumber+ogNumber;
+            }else
+            sum = m + n;
+            return sum;
+        }
+    }
+}
