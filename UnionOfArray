@@ -1,0 +1,21 @@
+class Solution{
+    public static int doUnion(int a[], int n, int b[], int m) 
+    {
+        List intList;
+        if(n>m){
+        intList = Arrays.asList(a);
+        }else{
+        intList = Arrays.asList(b); 
+        }
+        int count = 0;
+        for(int i =0;i<m;i++){
+            if(intList.contains(b[i])){
+               System.out.println(b[i]);
+            }else{
+                count ++;
+            }
+        }
+        
+        return (n-1)+count;
+    }
+}
