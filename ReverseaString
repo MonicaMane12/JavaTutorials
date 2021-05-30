@@ -1,0 +1,22 @@
+
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+        // Reverse the string str
+        String reverseStr = "";
+        byte[] strAscharArray = str.getBytes();
+        byte[] result = new byte[strAscharArray.length];
+        int j = 0;
+       
+        for(int i = strAscharArray.length - 1; i >= 0 ;i--){
+             
+              result[j] = strAscharArray[i];
+              //System.out.println(result);
+              j++;
+        }
+        return new String(result);
+    }
+}
